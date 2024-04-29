@@ -1,23 +1,30 @@
+// Dependencies
 const userRouter = require("express").Router();
+const {
+  getAllUser,
+  getSingleUser,
+  createNewUser,
+  updateUser,
+  deleteUser,
+} = require("../../controllers/user-controller");
 
-userRouter.get("/", async (req, res) => {
-  res.send("All users");
-});
+// Get All Users
+// api/user
+userRouter.get("/", getAllUser);
 
-userRouter.get("/:userId", async (req, res) => {
-  res.send("Get single user");
-});
+// Get Single User
+// api/user:userId
+userRouter.get("/:userId", getSingleUser);
 
-userRouter.post("/", async (req, res) => {
-  res.send("Create a new user");
-});
+// Create a new User
+// api/user
+userRouter.post("/", createNewUser);
+// Update User
+// api/user/userId
+userRouter.put("/:userId", updateUser);
+// Delete User
+// api/user/userId
+userRouter.delete("/:userId", deleteUser);
 
-userRouter.put("/:userId", async (req, res) => {
-  res.send("Update user info");
-});
-
-userRouter.delete("/:userId", async (req, res) => {
-  res.send("Delete a user");
-});
-
+// Export User Routes
 module.exports = userRouter;
