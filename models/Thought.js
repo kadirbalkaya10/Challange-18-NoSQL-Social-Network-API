@@ -42,7 +42,7 @@ const thoughtScheme = new mongoose.Schema({
     type: Date,
     default: Date.now,
     get: function (createdAt) {
-      return new Date(createdAt).toLocaleString;
+      return new Date(createdAt).toLocaleString();
     },
   },
   username: {
@@ -53,8 +53,8 @@ const thoughtScheme = new mongoose.Schema({
 });
 
 //Virtual to retrieve the length of the thought`s reactions
-thoughtsScheme.virtual("reactionCount").get(function () {
-  return this.reactions, length;
+thoughtScheme.virtual("reactionCount").get(function () {
+  return this.reactions.length;
 });
 
 //Create thoughts collection
