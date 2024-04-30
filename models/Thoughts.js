@@ -1,6 +1,5 @@
 //Dependencies
 const mongoose = require("mongoose");
-const { Thoughts } = require(".");
 const Schema = mongoose.Schema;
 
 // Sub Document
@@ -32,7 +31,7 @@ const reactionSchema = new mongoose.Schema(
 );
 
 // Set up Thoughts Collection Data Structure
-const thoughtsScheme = new mongoose.Schema({
+const thoughtScheme = new mongoose.Schema({
   thoughtText: {
     type: String,
     required: true,
@@ -59,7 +58,7 @@ thoughtsScheme.virtual("reactionCount").get(function () {
 });
 
 //Create thoughts collection
-const Thoughts = mongoose.model("thought", thoughtsScheme);
+const Thought = mongoose.model("Thought", thoughtScheme);
 
 //Export Thoughts model
-module.exports = Thoughts;
+module.exports = Thought;

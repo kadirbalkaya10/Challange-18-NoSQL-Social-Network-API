@@ -23,21 +23,22 @@ const userScheme = new mongoose.Schema({
     trim: true,
     lowercase: true,
     validate: [validateEmail, "Please fill a valid email address"],
-    match: [
-      /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-      "Please fill a valid email address",
-    ],
   },
   thoughts: [
     {
       type: Schema.Types.ObjectId,
-      ref: "Thoughts",
+      ref: "Thought",
     },
   ],
   friends: {
     type: Schema.Types.ObjectId,
     ref: "User",
   },
+});
+
+// Virtual to retrieve friendCount
+userScheme.virtual("friendCount").get(function () {
+  return this.friends.length;
 });
 
 //Create User Collection on database
