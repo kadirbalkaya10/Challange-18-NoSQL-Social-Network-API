@@ -30,10 +30,12 @@ const userScheme = new mongoose.Schema({
       ref: "Thought",
     },
   ],
-  friends: {
-    type: Schema.Types.ObjectId,
-    ref: "User",
-  },
+  friends: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+    },
+  ],
 });
 
 // Virtual to retrieve friendCount
