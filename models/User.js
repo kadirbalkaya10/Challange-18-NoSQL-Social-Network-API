@@ -31,7 +31,7 @@ const userScheme = new mongoose.Schema({
   thoughts: [
     {
       type: Schema.Types.ObjectId,
-      ref: "Thought",
+      ref: "Thoughts",
     },
   ],
   friends: {
