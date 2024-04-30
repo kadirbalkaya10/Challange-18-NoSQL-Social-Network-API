@@ -1,7 +1,5 @@
-//Dependencies
+const { connect, connection } = require("mongoose");
 
-const mongoose = require("mongoose");
+connect("mongodb://127.0.0.1:27017/socialApi");
 
-mongoose.connect("mongodb://localhost:27017/socialDB");
-
-module.exports = mongoose.connection;
+module.exports = connection;
