@@ -17,7 +17,7 @@ connection.once("open", async () => {
   let thoughtCheck = await connection.db
     .listCollections({ name: "thoughts" })
     .toArray();
-  if (userCheck.length) {
+  if (thoughtCheck.length) {
     await connection.dropCollection("thoughts");
   }
 
