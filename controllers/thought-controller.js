@@ -5,18 +5,18 @@ module.exports = {
   },
   // Get Single thought
   getThought: async (req, res) => {
-    res.send("Get single thoughts");
+    res.send("Get single thought");
   },
   // Create a new Thought
   createNewThought: async (req, res) => {
-    res.send("Get single thoughts");
+    res.send("Create a new thought");
   },
   // Update Thought
   updateThought: async (req, res) => {
-    res.send("Get single thoughts");
+    res.send("Update thought");
   },
   // Delete Thought
   deleteThought: async (req, res) => {
-    res.send("Get single thoughts");
+    res.send("Delete thought");
   },
 };
