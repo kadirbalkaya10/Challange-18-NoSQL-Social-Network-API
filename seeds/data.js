@@ -23,17 +23,17 @@ const thoughts = [
   {
     thoughtText: "I am king of Gondor",
     username: "aragorn",
-    reactions: [],
+    reactions: [{ reactionBody: "⚔️", username: "aragorn" }],
   },
   {
     thoughtText: "They are taking hobbits to Isengard",
     username: "legolas",
-    reactions: [],
+    reactions: [{ reactionBody: "🏹", username: "legolas" }],
   },
   {
     thoughtText: "Arhhhhhggggg!!!",
     username: "gimli",
-    reactions: [],
+    reactions: [{ reactionBody: "𐃈", username: "gimli" }],
   },
 ];
 
