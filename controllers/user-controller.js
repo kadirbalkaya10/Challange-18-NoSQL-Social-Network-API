@@ -94,10 +94,7 @@ module.exports = {
         );
       }
       // Sending JSON response with success message and new friend data
-      res.json(
-        { message: `${newFriend.username} added as a friend` },
-        newFriend
-      );
+      res.json({ message: `${newFriend.username} added as a friend` });
     } catch (error) {
       console.log(error);
       res.status(500).json(error);
